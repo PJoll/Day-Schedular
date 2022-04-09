@@ -2,10 +2,10 @@ var currentDayE1 = $("#currentDay");
 
 
 
-function displayTime(){
-    var timeDate = moment().format("dddd, MMMM Do");
+function displayTime() {
+    var timeDate = moment().format('dddd, MMMM Do');
     currentDayE1.text(timeDate);
-    console.log(timeDate);
+
 }
 
 
@@ -15,8 +15,4 @@ function displayTime(){
 
 
 
-
-
-
-// var date = moment();
-// $("currentDay").text(date.format("dddd", "MMMM Do"));
+setInterval(displayTime, 1000);
