@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 currentDayE1.text(currentTime)
 for (i=9; i<17; i++){
-    $('#b'+i).click(function(){
+    $(`#b${i}`).click(function(){
         var event =($("#"+this.id.slice(1)-(9)).val())
         if (event!=""){
             var q=localStorage.length
@@ -32,12 +32,30 @@ function tableColor(){
 var currentTime = moment().format("HH");
 for (i=9; i<17; i++){
     if (i<currentTime){
-        $("#"+i).classList.add("past")
+        $("#"+i).addClass("past")
     }
     else{
-        $("#"+i).classList.add("future")
+        $("#"+i).addClass("future")
     }
 }
+
+var adjustedCurrentTime=currentTime-9
+        for (i=0; i<9; i++){
+         if(i<adjustedCurrentTime){
+         $("#"+i).addClass("past")
+         }
+          else if(i-adjustedCurrentTime===0){
+             $("#"+i).addClass("present")
+             }
+         else{
+             $("#"+i).addClass("future")
+             }
+            }
+
+
+
+
+
 
 function displaySaved() {
     var id=[]
