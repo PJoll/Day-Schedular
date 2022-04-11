@@ -29,7 +29,7 @@ The goal of the project is to create a day planner that is able to diplay inputt
 ## Usage 
 The following image shows the completed result.
 The following link takes you to the calander:
-
+https://pjoll.github.io/Day-Schedular/
 
 
 ![alt text](/Assets/FireShot%20Capture%20008%20-%20Work%20Day%20Scheduler%20-%20127.0.0.1.png)
